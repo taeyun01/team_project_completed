@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>MiniProject_아이(i)들</title>
+	<link rel="stylesheet" href="./css/indexStyle.css" />
+</head>
+
+<body>
+	<div class="content_wrapper">
+		<!-- 초원님 메인 페이지 div -->
+
+		<div class="main">
+			<header class="header">
+				<img class="headerLogo" src="./img/logo_white.png" />
+				<button class="headerBtn" onclick="location.href='./cheerMsg.html'">응원의 글</button>
+				<button class="headerLoginBtn">Login</button>
+				<button class="headerLogoutBtn">Logout</button>
+				<!-- 태윤님 메인 페이지 div12 -->
+
+				<div class="login">
+					<!-- 로그인 모달 -->
+					<div class="logInPage">
+						<div class="logInModalBox">
+							<span class="modalClose logInModalClose">✖</span>
+							<!-- 로그인 폼 -->
+							<div class="logInForm">
+								<form action="#">
+									<h2>로그인</h2>
+									<div class="inputBox">
+										<input id="logInEmail" type="email" placeholder="이메일을 입력해주세요." required />
+									</div>
+									<div class="inputBox">
+										<input id="logInPassword" type="password" placeholder="비밀번호를 입력해주세요." required />
+									</div>
+									<p class="loginIdPasswordAlert">ID와 패스워드를 확인해주세요!</p>
+									<button id="logInButton" class="logInButtonClass" type="submit">로그인</button>
+									<div class="signUpBox">
+										<span>아이디가 없으신가요?</span>
+										<a href="#" id="signUpPageButton">회원가입</a>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+
+					<!-- 회원가입 모달 -->
+					<div class="signUpPage">
+						<div class="formContainer signUpModalBox">
+							<span class="modalClose signUpModalClose">✖</span>
+							<!-- 회원가입 폼 -->
+							<div class="singUpForm">
+								<form action="#">
+									<h2>회원가입</h2>
+									<div class="inputBox">
+										<input id="signUpEmail" type="email" placeholder="이메일을 입력해주세요" required />
+									</div>
+									<div class="inputBox">
+										<input id="signUpPassword" type="password" placeholder="비밀번호를 입력해주세요 (최소 6자)" required />
+									</div>
+									<div class="inputBox">
+										<input id="signUpConfirmPassword" type="password" placeholder="비밀번호 확인" required />
+									</div>
+									<p class="signUpEmaildAlert">이메일이 사용 중이거나 형식에 맞지 않습니다.</p>
+									<p class="signUpPasswordAlert">비밀번호가 맞지 않습니다!</p>
+									<p class="signUpEmailEmptyAlert">이메일을 입력해주세요!</p>
+									<button id="signUpButton" class="signUpButtonClass">회원가입</button>
+									<div class="logInBox">
+										<span>이미 회원이신가요?</span>
+										<a href="#" id="logInPageButton">로그인</a>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
+			<div class="mainContent">
+				<img class="mainLogo" src="./img/logo_white.png" />
+			</div>
+		</div>
+
+		<!--팀 소개 페이지-->
+		<div class="team">
+			<div class="teamTitle">
+				<p class="teamTitleText">우리 팀을 소개합니다</p>
+			</div>
+			<div class="teamContent">
+				<div id="teamDiv" class="teamRules">
+					<p id="teamDivTitle">Rules</p>
+					<p id="teamText">✅ 서로 존중하기</p>
+					<p id="teamText">✅ 서로 물어보기</p>
+					<p id="teamText">✅ 서로 공유하기</p>
+					<p id="teamText">✅ 지각은 NO!</p>
+					<p id="teamText">✅ 연락 확인 수시로</p>
+				</div>
+				<div id="teamDiv" class="teamGoals">
+					<p id="teamDivTitle">Goals</p>
+					<p id="teamText">🥇 부트캠프 수료</p>
+					<p id="teamText">🥇 개발자 되기</p>
+					<p id="teamText">🥇 취업 하기</p>
+				</div>
+				<div class="teamAbout">
+					<p id="teamDivTitle">About Us</p>
+					<p class="teamInfoText">
+						저희 팀은 대문자 I(아이)로 이루어진 아이들 입니다. 이루고자 하는 목표를 가지고 모여 꿈을 달성하기 위해
+						오늘도 열심히 달리는 중입니다!🏃
+					</p>
+				</div>
+			</div>
+		</div>
+		<!-- 기준님 팀원 소개 페이지 div -->
+		<div class="member">
+			<br />
+			<div class="teammateIntro_main">
+				<h1 class="teammateIntro_text">아이(i)들 멤버를<br />소개합니다</h1>
+
+				<div class="teammateIntro_members">
+					<div class="teammateIntro_membersSector">
+						<div class="teammate" id="teammate01">
+							<img class="teammateImage_modified" src="./img/01.png" />
+							<h3 class="teammatePosition">리더</h3>
+							<h3 class="teammateName">윤기준</h3>
+						</div>
+						<div class="teammate" id="teammate02">
+							<img class="teammateImage" src="./img/02.png" />
+							<h3 class="teammatePosition">팀원</h3>
+							<h3 class="teammateName">한남송</h3>
+						</div>
+						<div class="teammateRightEnd" id="teammate03">
+							<img class="teammateImage" src="./img/03.png" />
+							<h3 class="teammatePosition">팀원</h3>
+							<h3 class="teammateName">박초원</h3>
+						</div>
+					</div>
+					<div class="teammateIntro_membersSector">
+						<div class="teammateLeftEnd" id="teammate04">
+							<img class="teammateImage" src="./img/04.png" />
+							<h3 class="teammatePosition">팀원</h3>
+							<h3 class="teammateName">임현석</h3>
+						</div>
+						<div class="teammate" id="teammate05">
+							<img class="teammateImage" src="./img/05.png" />
+							<h3 class="teammatePosition">팀원</h3>
+							<h3 class="teammateName">유태윤</h3>
+						</div>
+						<div class="teammate" id="teammate06">
+							<img class="teammateImage" src="./img/06.png" />
+							<h3 class="teammatePosition">팀원</h3>
+							<h3 class="teammateName">김한별</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="teammateModals">
+				<div class="teammateModal" id="teammateModal01">
+					<div class="teammateModalBody">
+						<button class="modalExitBtn" id="modalExitBtn01">X</button>
+						<div class="modalProfileSection">
+							<img class="teammateImage" src="./img/01.png" />
+							<div class="modalTeammateProfile">
+								<h3 class="modalTeammatePosition">리더</h3>
+								<h3 class="modalTeammateName">윤기준</h3>
+							</div>
+						</div>
+						<div class="modalTeammateDescription">
+							<h3 class="modalTeammateDescription_title">[소개]</h3>
+							<h3 class="modalTeammateDescription_content">
+								대학교 졸업 후 다른 직종의 회사를 다니다 개발자가 되고자 내일배움캠프를 시작하게 되었습니다. 최근 본
+								브레이킹 배드 시리즈가 정말 재밌었으니 모두 꼭 보시길 추천합니다.
+							</h3>
+							<h3 class="modalTeammateDescription_title">[장점]</h3>
+							<h3 class="modalTeammateDescription_content">
+								해결해야할 문제에 대해 꾸준히 고민하고 결국 그 문제를 해결하는 데에서 즐거움을 느낄줄 안다고
+								생각합니다.
+							</h3>
+							<h3 class="modalTeammateDescription_title">[업무 및 협업 스타일]</h3>
+							<h3 class="modalTeammateDescription_content">
+								문제 상황을 이해하고 해당 문제 해결이 요구하는 사항을 파악하는 체계적인 과정을 거치려고 노력하는
+								편입니다. '문제 상황 이해'와 '요구사항 파악' 둘 다 어느정도 주관성을 갖추고 있기 때문에, 많은 동료들과
+								함께 소통한다면 더 폭넓은 이해가 가능할거라고 생각해 원활한 소통을 용이하게 하고자 합니다.
+							</h3>
+						</div>
+					</div>
+				</div>
+				<div class="teammateModal" id="teammateModal02">
+					<div class="teammateModalBody">
+						<button class="modalExitBtn" id="modalExitBtn02">X</button>
+						<div class="modalProfileSection">
+							<img class="modalTeammateImage" src="./img/02.png" />
+							<div class="modalTeammateProfile">
+								<h3 class="modalTeammatePosition">팀원</h3>
+								<h3 class="modalTeammateName">한남송</h3>
+							</div>
+						</div>
+						<div class="modalTeammateDescription">
+							<h3 class="modalTeammateDescription_title">[소개]</h3>
+							<h3 class="modalTeammateDescription_content">
+								산업디자인을 전공하고, 혼자서 작게 여행관련 사업을 합니다. 이것저것 다 관심이 많습니다.
+							</h3>
+							<h3 class="modalTeammateDescription_title">[장점]</h3>
+							<h3 class="modalTeammateDescription_content">
+								제일 잘하는 것은 무언가를 보기 좋게 만드는 것 입니다. 그리고 사람들이 겪고 있는 문제의 본질을 찾아내고
+								그 문제를 해결해 나가는 과정을 좋아합니다.
+							</h3>
+							<h3 class="modalTeammateDescription_title">[업무 및 협업 스타일]</h3>
+							<h3 class="modalTeammateDescription_content">
+								어떤 조직에서 필요한 역할, 그 중 내가 가장 많이 기여할 수 있는 것을 파악하고 거기에 맞춰 일하는
+								스타일입니다.
+							</h3>
+						</div>
+					</div>
+				</div>
+				<div class="teammateModal" id="teammateModal03">
+					<div class="teammateModalBody">
+						<button class="modalExitBtn" id="modalExitBtn03">X</button>
+						<div class="modalProfileSection">
+							<img class="modalTeammateImage" src="./img/03.png" />
+							<div class="modalTeammateProfile">
+								<h3 class="modalTeammatePosition">팀원</h3>
+								<h3 class="modalTeammateName">박초원</h3>
+							</div>
+						</div>
+						<div class="modalTeammateDescription">
+							<h3 class="modalTeammateDescription_title">[소개]</h3>
+							<h3 class="modalTeammateDescription_content">조용하게 할일 열심히 하는 내성적인 INTJ입니다.</h3>
+							<h3 class="modalTeammateDescription_title">[장점]</h3>
+							<h3 class="modalTeammateDescription_content">매사 하는 일에 책임감을 막중히 가집니다.</h3>
+							<h3 class="modalTeammateDescription_title">[업무 및 협업 스타일]</h3>
+							<h3 class="modalTeammateDescription_content">
+								도와줄 수 있는거라면 기쁜 마음으로 도와주고 모르는 것은 공부해 팀에 기여하고 싶어하는 스타일입니다.
+							</h3>
+						</div>
+					</div>
+				</div>
+				<div class="teammateModal" id="teammateModal04">
+					<div class="teammateModalBody">
+						<button class="modalExitBtn" id="modalExitBtn04">X</button>
+						<div class="modalProfileSection">
+							<img class="modalTeammateImage" src="./img/04.png" />
+							<div class="modalTeammateProfile">
+								<h3 class="modalTeammatePosition">팀원</h3>
+								<h3 class="modalTeammateName">임현석</h3>
+							</div>
+						</div>
+						<div class="modalTeammateDescription">
+							<h3 class="modalTeammateDescription_title">[소개]</h3>
+							<h3 class="modalTeammateDescription_content">
+								안녕하세요. ISFJ 프론트엔드 개발자 임현석입니다. 그림은 잘 못 그려도 디자인을 좋아하기 때문에
+								프론트엔드가 제 성향에 잘 맞는 것 같아요. 그렇기에 인터렉션 디자인에 관심이 있으며, 멋지게 디자인
+								페이지들을 보면 따라 해보고 싶은 욕구가 샘솟습니다(샘솟기만 합니다..) 이 글을 보시는 모든 분, 만나서
+								정말 반갑습니다~!!
+							</h3>
+							<h3 class="modalTeammateDescription_title">[장점]</h3>
+							<h3 class="modalTeammateDescription_content">
+								전 게으른 완벽주의자 성향이 강합니다😅 하지만 스파르타 기간에는 '게으른'이라는 단어가 강제로 사라지기
+								때문에 맡은 바를 최대한 완성도 있게 구현하도록 하겠습니다.
+							</h3>
+							<h3 class="modalTeammateDescription_title">[업무 및 협업 스타일]</h3>
+							<h3 class="modalTeammateDescription_content">
+								협업 시 상대에게 맞춰 상대의 코드 구조를 분석하고 같이 맞춰나가는 스타일입니다. 그리고 코딩할 때
+								안되는 건 어떻게든 밤을 새우는 한이 있더라도 해결하는 편입니다. 협업 시 저보다 월등히 잘하시는 분과
+								함께 하며 반쯤 울면서 코딩한 경험도 있고, 처음 하시는 분과 호흡을 맞춰본 적도 있는 만큼 다양한
+								분들과도 재밌게 협업해 나갈 수 있을 것입니다.
+							</h3>
+						</div>
+					</div>
+				</div>
+				<div class="teammateModal" id="teammateModal05">
+					<div class="teammateModalBody">
+						<button class="modalExitBtn" id="modalExitBtn05">X</button>
+						<div class="modalProfileSection">
+							<img class="modalTeammateImage" src="./img/05.png" />
+							<div class="modalTeammateProfile">
+								<h3 class="modalTeammatePosition">팀원</h3>
+								<h3 class="modalTeammateName">유태윤</h3>
+							</div>
+						</div>
+						<div class="modalTeammateDescription">
+							<h3 class="modalTeammateDescription_title">[소개]</h3>
+							<h3 class="modalTeammateDescription_content">
+								안녕하세요. React_5기 유태윤 입니다. MBTI는 ISFP이고, 제가 워낙 낯을 가리지만 친해질 수 있도록 최대한
+								노력할것이고, 또 적응되면 괜찮아질거라 생각합니다!
+							</h3>
+							<h3 class="modalTeammateDescription_title">[장점]</h3>
+							<h3 class="modalTeammateDescription_content">
+								주어진 문제에 대해 어떻게든 해결해볼려는 노력을 하는것 같습니다.
+							</h3>
+							<h3 class="modalTeammateDescription_title">[업무 및 협업 스타일]</h3>
+							<h3 class="modalTeammateDescription_content">
+								저는 굉장히 내성적이지만. 팀원들 얘기도 듣고, 내 생각도 공유하면 괜찮을거라 생각할땐 주장하는
+								스타일입니다. 그리고 최대한 팀원분들께 맞춰가려고 합니다.
+							</h3>
+						</div>
+					</div>
+				</div>
+				<div class="teammateModal" id="teammateModal06">
+					<div class="teammateModalBody">
+						<button class="modalExitBtn" id="modalExitBtn06">X</button>
+						<div class="modalProfileSection">
+							<img class="modalTeammateImage" src="./img/06.png" />
+							<div class="modalTeammateProfile">
+								<h3 class="modalTeammatePosition">팀원</h3>
+								<h3 class="modalTeammateName">김한별</h3>
+							</div>
+						</div>
+						<div class="modalTeammateDescription">
+							<h3 class="modalTeammateDescription_title">[소개]</h3>
+							<h3 class="modalTeammateDescription_content">느리지만 꾸준한 INFJ</h3>
+							<h3 class="modalTeammateDescription_title">[장점]</h3>
+							<h3 class="modalTeammateDescription_content">
+								거북이가 토끼를 이기는 방법은 성실함 그리고 꾸준함입니다. 저는 특출나게 똑똑하지 않습니다. 다만 제게
+								강점이있다면 성실함입니다.
+							</h3>
+							<h3 class="modalTeammateDescription_title">[업무 및 협업 스타일]</h3>
+							<h3 class="modalTeammateDescription_content">
+								조화. 저는 협업 시 제 의견을 강하게 어필하기 보단, 상대방의 의견을 경청하여 듣고 적극적으로 수용하는
+								스타일 입니다.
+							</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 남송님 응원글 페이지 div -->
+		<div class="cheerMsg">
+			<p class="msg">아이(i)들에게<br />응원의 한마디를 보내보세요</p>
+			<div class="cheerMsgWrapper">
+				<input class="author" id="name" placeholder="작성자" />
+				<input id="msgInput" class="msgInput" placeholder="응원의 메세지를 남겨주세요." />
+			</div>
+			<button class="cheerMsgBtn">응원하기</button>
+
+			<footer class="footer">
+				<img src="../img/logo_white.png" />
+				<div class="footerDiv">
+					<p class="footerEmailTitle">Email</p>
+					<div class="footerEmail">
+						<p>kukubasak@gmail.com</p>
+						<p>mashroom11@gmail.com</p>
+						<p>parkcandle@gmail.com</p>
+						<p>kim99326@gmail.com</p>
+						<p>arozic425@gmail.com</p>
+						<p>lwe12f675@gmail.com</p>
+					</div>
+				</div>
+			</footer>
+
+			<div id="openChatBoard">
+				<img src="../img/msg_icon.png" alt="msg" id="openChatBoardIcon" />
+			</div>
+		</div>
+		<div id="modalWrapper">
+			<div id="board">
+				<div id="reviewBoard">
+					<div id="boardHeader">
+						<img src="../img/logo_black.png" alt="logo" class="boardHeaderImg" />
+						<img src="../img/closeBtn_16.png" alt="X" id="closeBtn" />
+					</div>
+					<div id="chatBoard"></div>
+					<div id="inputContianer">
+						<input type="text" id="messageInput" placeholder="응원의 한마디를 부탁해요!" />
+						<button type="submit" id="messageSubmitButton">전송</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
+	<script type="module" src="./js/indexScript.js"></script>
+	<script type="module" src="./js/modal.js"></script>
+	<script type="module" src="./js/register.js"></script>
+</body>
+
+</html>

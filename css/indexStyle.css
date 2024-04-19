@@ -1,0 +1,826 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  overflow: hidden;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue",
+    "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.content_wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: 0;
+}
+
+.main {
+  position: relative;
+  background-image: url("../img/home_background_img.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100dvh;
+  margin: 0;
+  padding: 0;
+}
+
+.member {
+  width: 100%;
+  height: 100dvh;
+}
+
+.cheerMsg {
+  width: 100%;
+  height: 100dvh;
+  position: relative; /* footer 위치 배치때문에 넣었습니다!*/
+}
+
+/* 태윤님 login CSS ↓ */
+/* 로그인, 회원가입 페이지 */
+.logInPage,
+.signUpPage {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: none;
+  z-index: 1050;
+}
+
+/* 로그인, 회원가입 모달창 */
+.logInModalBox,
+.signUpModalBox {
+  position: absolute;
+  max-width: 360px;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 25px;
+  border: 0.5px solid #38b30d;
+  border-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  z-index: 101;
+}
+
+.logInPage.active {
+  display: flex;
+}
+
+.signUpPage.active {
+  display: flex;
+}
+
+.logInModalBox h2,
+.signUpModalBox h2 {
+  font-size: 24px;
+  text-align: center;
+  color: #38b30d;
+}
+
+.modalClose {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 14px;
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.inputBox {
+  position: relative;
+  margin-top: 30px;
+  width: 100%;
+  height: 40px;
+}
+
+.inputBox input {
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #aaaaaa;
+  transition: all 0.3s ease;
+}
+
+.inputBox input:focus {
+  border-color: #38b30d;
+}
+
+.logInButtonClass,
+.signUpButtonClass {
+  background-color: #38b30d;
+  margin-top: 15px;
+  width: 100%;
+  padding: 10px 0;
+  border-radius: 6px;
+  border: none;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.signUpBox,
+.logInBox {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.signUpBox > a,
+.logInBox > a {
+  color: #38b30d;
+  text-decoration: none;
+}
+
+/* 경고 메세지 */
+.signUpPasswordAlert,
+.signUpEmaildAlert,
+.signUpEmailEmptyAlert,
+.loginIdPasswordAlert {
+  margin-top: 10px;
+  margin-bottom: 0;
+  font-size: 14px;
+  color: rgb(250, 0, 0);
+  display: none;
+}
+
+.signUpPasswordAlert.active,
+.signUpEmaildAlert.active,
+.signUpEmailEmptyAlert.active,
+.loginIdPasswordAlert.active {
+  display: block;
+}
+
+/* 로그인박스(테스트용) */
+.headerLoginBtn {
+  display: none;
+}
+
+.headerLoginBtn.active {
+  display: block;
+}
+
+/* 로그아웃 박스 */
+.headerLogoutBtn {
+  display: none;
+}
+
+.headerLogoutBtn.active {
+  display: block;
+}
+
+/* 로그아웃 박스 */
+.headerLogoutBtn {
+  display: none;
+}
+
+.headerLogoutBtn.active {
+  display: block;
+}
+/* 초원님 main CSS ↓ */
+/* team page css */
+.team {
+  width: 100%;
+  height: 100dvh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.team > p {
+  display: block;
+}
+
+.teamTitle {
+  margin: 0 400px;
+  border-bottom: 1px solid rgb(192, 192, 192);
+}
+
+.teamTitleText {
+  font-size: 90px;
+  font-weight: bolder;
+  color: #30b21e;
+}
+
+.teamContent {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.teamContent #teamDivTitle {
+  font-size: 40px;
+  font-weight: bold;
+  margin: 0;
+  padding: 15px 0 25px 0;
+}
+
+.teamAbout {
+  width: 350px;
+  height: 400px;
+  padding: 40px 50px;
+  border: 4px solid #43a737;
+  border-radius: 40px;
+  margin: 50px 15px;
+}
+
+#teamDiv {
+  width: 350px;
+  height: 400px;
+  padding: 40px 70px;
+  border: 4px solid #43a737;
+  border-radius: 40px;
+  margin: 50px 15px;
+}
+
+#teamText {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.teamInfoText {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: left;
+  line-height: 35px;
+}
+
+/* main page css */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: auto;
+  height: 150px;
+  margin: 0 100px 0 100px;
+  padding: 30px;
+  border-bottom: 1px solid white;
+}
+
+.headerLogo {
+  width: 160px;
+  height: auto;
+}
+
+.headerBtn {
+  width: 150px;
+  height: auto;
+  background-color: transparent;
+  border: transparent;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "Pretendard", Arial, Helvetica, sans-serif;
+  margin-left: auto;
+}
+
+.headerBtn:hover {
+  cursor: pointer;
+  color: #30b21e;
+}
+
+.headerLoginBtn {
+  font-family: "Pretendard", Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  padding: 5px 10px;
+  color: white;
+  background-color: transparent;
+  border-radius: 9px;
+  border: 2px solid #30b21e;
+}
+
+.headerLoginBtn:hover {
+  cursor: pointer;
+  background-color: #30b21e;
+}
+
+.headerLogoutBtn {
+  font-size: 20px;
+  padding: 5px 10px;
+  color: white;
+  background-color: #30b21e;
+  border: 2px solid #30b21e;
+  border-radius: 9px;
+  margin-left: 10px;
+}
+
+.headerLogoutBtn:hover {
+  cursor: pointer;
+  background-color: #289219;
+  border-color: #289219;
+}
+
+.mainContent {
+  width: 100%;
+  height: calc(100dvh - 150px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.mainLogo {
+  margin-top: -180px;
+  height: 300px;
+  width: auto;
+}
+
+/* footer css */
+.footer {
+  width: 100%;
+  background-color: rgb(63, 63, 63);
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 120px;
+  margin-bottom: auto;
+  position: absolute;
+  bottom: 0;
+}
+.footer > img {
+  height: 50px;
+}
+
+.footerDiv {
+  color: white;
+}
+
+.footerEmailTitle {
+  font-size: 15px;
+}
+
+.footerEmail > p {
+  margin-right: 20px;
+  margin-top: 15px;
+  font-size: 13px;
+}
+
+/* 기준님 member CSS ↓ */
+.teammateIntro_main {
+  margin: 120px 50px 20px 50px;
+
+  /* background-color: blueviolet; */
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 600px;
+}
+
+.teammateIntro_text {
+  font-size: 80px;
+
+  margin-left: 40px;
+  margin-bottom: 50px;
+
+  width: 1200px;
+  /* background-color: skyblue; */
+  color: #38b30d;
+}
+
+.teammateIntro_members {
+  width: 2400px;
+  /* background-color: red; */
+}
+.teammateIntro_membersSector {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.teammate {
+  margin: 10px 40px 10px 40px;
+
+  width: 250px;
+  height: 330px;
+  text-align: center;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+}
+
+.teammateRightEnd {
+  margin: 10px 90px 10px 40px;
+
+  width: 250px;
+  height: 330px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+}
+
+.teammateLeftEnd {
+  margin: 10px 40px 10px 90px;
+
+  width: 250px;
+  height: 330px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+}
+
+.teammate:hover {
+  width: 270px;
+  height: 330px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.18);
+  transition: 0.3s;
+}
+
+.teammateLeftEnd:hover {
+  width: 270px;
+  height: 330px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.18);
+
+  transition: 0.3s;
+}
+
+.teammateRightEnd:hover {
+  width: 270px;
+  height: 330px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.18);
+  transition: 0.5s;
+}
+
+.teammateImage {
+  width: 160px;
+  margin-top: 30px;
+}
+
+.teammateImage_modified {
+  width: 140px;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+
+.teammatePosition {
+  margin-top: 25px;
+  font-size: 20px;
+  color: #38b30d;
+}
+
+.teammateName {
+  margin-top: -10px;
+  font-size: 24px;
+  color: #444742;
+}
+
+.teammateModal {
+  position: absolute;
+  display: none;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.teammateModalBody {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 500px;
+  height: 780px;
+
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  box-shadow: 0 2px 3px 0 rgba(34, 36, 38, 0.25);
+}
+
+.modalExitBtn {
+  margin: 30px 0px 0px 430px;
+  border: rgba(255, 255, 255, 0);
+  background-color: rgba(255, 255, 255, 0);
+  font-size: 2em;
+  font-weight: bold;
+  color: rgb(159, 159, 159);
+  cursor: pointer;
+}
+
+.modalExitBtn:hover {
+  color: rgb(49, 96, 34);
+  transition: 0.5s;
+}
+
+.modalProfileSection {
+  width: 400px;
+  margin-top: -25px;
+  margin-left: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+}
+
+.modalTeammateProfile {
+  margin-left: 55px;
+}
+
+.modalTeammateImage {
+  width: 190px;
+  margin-top: 20px;
+}
+
+.modalTeammatePosition {
+  font-size: 24px;
+  color: #38b30d;
+}
+
+.modalTeammateName {
+  margin-top: -15px;
+  margin-bottom: 10px;
+  font-size: 36px;
+  color: #000000;
+}
+
+.modalTeammateDescription {
+  width: 400px;
+  margin-top: 50px;
+  margin-left: 50px;
+}
+
+.modalTeammateDescription_title {
+  font-size: 20px;
+  color: #000000;
+}
+
+.modalTeammateDescription_content {
+  margin-top: -10px;
+  font-size: 16px;
+  color: #444742;
+}
+
+/* 남송님 cheerMsg CSS ↓ */
+
+.cheerMsg > .msg {
+  font-size: 32px;
+  font-weight: bold;
+  font-family: "Pretendard", Arial, Helvetica, sans-serif;
+  text-align: center;
+  margin-top: 90px;
+}
+
+.cheerMsgWrapper {
+  margin: 10px 10%;
+  height: 100px;
+  padding: 20px 40px 20px 20px;
+  background-color: #cde5c4;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.cheerMsgInput {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 50px;
+  font-size: 18px;
+  color: white;
+  padding: 0 30px;
+  font-weight: bold;
+}
+
+.cheerMsgInput::placeholder {
+  color: white;
+}
+
+.cheerMsgInput:focus {
+  outline: none;
+}
+
+.cheerMsgWrapper > img {
+  width: 50px;
+  margin-right: 10px;
+}
+
+.author {
+  width: 150px;
+  height: 100%;
+  padding: 10px 30px;
+  border: transparent;
+  border-radius: 50px;
+  margin: 0 20px;
+  font-size: 18px;
+}
+.author:focus {
+  outline: none;
+}
+
+.cheerMsgWrapper > p {
+  font-size: 35px;
+  text-align: center;
+  width: 70%;
+  margin-right: 3%;
+}
+
+.cheerMsgWrapper > span {
+  color: #808080;
+  font-size: 16px;
+  font-weight: lighter;
+  width: 50px;
+}
+
+.cheerMsg > button {
+  font-family: "Pretendard", Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  background-color: #38b30d;
+  color: white;
+  margin-top: 80px;
+  padding: 10px 30px;
+  border: 0px;
+  border-radius: 20px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.cheerMsg > button:hover {
+  background-color: #30960b;
+}
+
+.msgInput {
+  width: 100%;
+  height: 100%;
+  padding: 10px 30px;
+  font-size: 18px;
+  border: transparent;
+  border-radius: 50px;
+}
+.msgInput:focus {
+  outline: none;
+}
+
+/* chatModal CSS */
+#openChatBoard {
+  display: flex;
+  position: fixed;
+  bottom: 50px;
+  right: 60px;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  margin-left: 50px;
+  background-color: #f0f89b;
+  box-shadow: 6px 5px 5px 0px rgba(125, 125, 125, 0.76);
+
+  cursor: pointer;
+  z-index: 999;
+}
+
+#openChatBoard:active {
+  transform: translateY(1px);
+  box-shadow: 4px 3px 6px 0px rgba(133, 133, 133, 0.5);
+}
+
+#openChatBoardIcon {
+  margin-top: 1px;
+  margin-left: 1px;
+}
+
+#board {
+  display: none;
+  position: fixed;
+  flex-direction: column;
+  bottom: 110px;
+  right: 117px;
+}
+
+#board.active {
+  display: flex;
+}
+
+#reviewBoard {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  height: 550px;
+  border: 1px solid #38b30d;
+  border-radius: 10px;
+  background-color: #edebe8;
+}
+
+#boardHeader {
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+  width: 100%;
+  height: 50px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: white;
+}
+
+.boardHeaderImg {
+  display: absolute;
+  top: 10px;
+  left: 10px;
+  width: 64px;
+  height: 20px;
+}
+
+#closeBtn {
+  margin-top: 3px;
+  margin-left: 205px;
+  cursor: pointer;
+}
+
+#chatBoard {
+  display: flex;
+  flex-direction: column;
+  width: 318px;
+  height: 510px;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+#inputContianer {
+  display: flex;
+}
+
+#messageInput {
+  flex: 1;
+  width: 100%;
+  height: 40px;
+  border: none;
+  padding: 10px;
+  font-size: 12px;
+  border-bottom-left-radius: 10px;
+}
+
+#messageInput:focus {
+  outline: none;
+}
+
+#messageSubmitButton {
+  font-family: "Pretendard Variable", Pretendard, sans-serif;
+  height: 40px;
+  border: none;
+  font-weight: 500;
+  letter-spacing: 1px;
+  padding: 0 12px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 10px;
+  background-color: #38b30d;
+  cursor: pointer;
+}
+
+#messageSubmitButton:hover {
+  background-color: #82d265;
+}
+
+.myMessage,
+.yourMessage {
+  width: auto;
+  max-width: 70%;
+  margin-bottom: 7px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.myMessage {
+  align-self: flex-end;
+  background-color: #dcf8c6;
+}
+
+.yourMessage {
+  display: flex;
+  align-self: flex-start;
+  background-color: #ffffff;
+}
